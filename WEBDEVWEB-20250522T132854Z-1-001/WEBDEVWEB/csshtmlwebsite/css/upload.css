@@ -1,0 +1,83 @@
+
+  .upload-box img {
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2em;
+    width: 40%;
+    max-width: 600px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    color: #7b726b;
+  }
+
+  .modal-content h2 {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  .close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .upload-box {
+    margin: 1em 0;
+    background: #e0e0e0;
+    padding: 2em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .upload-icon {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+
+  select, textarea, input[type="text"] {
+    width: 100%;
+    padding: 0.8em;
+    margin: 1em 0;
+    border: 1px solid #ccc;
+  }
+
+  .submit-btn {
+    background: #8ded77;
+    color: #4a4a4a;
+    border: none;
+    padding: 0.7em 2em;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    transition: background 0.3s;
+  }
+
+  .submit-btn:hover {
+    background: #7dd76b;
+  }
+
+  .sidebar a {
+    display: block;
+    margin: 1em;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+  }

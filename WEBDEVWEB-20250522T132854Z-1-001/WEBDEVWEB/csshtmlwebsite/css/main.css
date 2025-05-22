@@ -1,0 +1,174 @@
+/* main.css */
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px 80px;
+}
+
+.sidebar {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+.sidebar a {
+  padding: 15px 35px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #5f5858;
+  border: 2px solid #bbb;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.sidebar a:hover {
+  background-color: #eee;
+  border-color: #444;
+}
+
+.artist-section h2 {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  color: #8a817b;
+  text-align: center;
+}
+
+.artist-section h2 span {
+  color: #575454;
+}
+
+.artist-info {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.landscape-img {
+  width: 450px;
+  height: auto;
+  border: 3px solid #3d3b3b;
+  border-radius: 5px;
+}
+
+.artist-info p {
+  max-width: 430px;
+  font-size: 50px;
+  font-weight: 300;
+  color: #8a817b;
+  line-height: 1.6;
+}
+
+/* modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  width: 600px;
+  max-width: 90vw;
+  display: flex;
+  gap: 40px;
+  border-radius: 8px;
+  font-weight: 300;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-content h2 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.modal-content label {
+  font-weight: 300;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content input[type="text"],
+.modal-content input[type="file"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.modal-content label > input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+}
+
+.modal-content button {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #222;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.modal-content p a {
+  cursor: pointer;
+  color: #444;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.modal-content p a:hover {
+  text-decoration: underline;
+}
+
+#login-error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: none;
+  font-weight: 600;
+}

@@ -1,0 +1,71 @@
+.profile-modal {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 400px;
+  position: relative;
+}
+
+.account-title {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.profile-img-wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  border: 3px solid #aaa;
+  position: relative;
+  background-color: #eee;
+  flex-shrink: 0;
+}
+
+.profile-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* ✅ Ensures image fills circle without distortion */
+  object-position: center;
+  display: block;
+}
+
+
+#displayName {
+  margin: 5px 0;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#editName {
+  margin: 8px auto;
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.save-button {
+  width: 60%;
+  margin: 20px auto 0;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+}
+
+.profile-modal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}

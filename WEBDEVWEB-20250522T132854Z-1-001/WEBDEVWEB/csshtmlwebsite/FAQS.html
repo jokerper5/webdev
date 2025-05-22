@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EMCore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="pictures/logo.webp">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/upload.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/bottom.css" />
+</head>
+
+<body>
+<header>
+    <a href="website.html" style="display: inline-block;">
+  <img src="pictures/logo.webp" alt="Logo" class="logo-img" style="height:60px;" />
+  </a>
+    <img id="profile-pic" src="pictures/default-profile.png" alt="Profile" class="profile-icon" onclick="toggleDropdown()" />
+    <div id="dropdown-menu" class="dropdown-menu">
+      <a href="#" onclick="openEditProfile()">Edit Profile</a>
+      <a href="#" onclick="logout()">Logout</a>
+      <div>
+      </div>
+      </header>
+
+      <!--content why not-->
+      <section>
+  <div style="text-align: left; max-width: 900px; margin: 0 auto; padding: 20px;">
+    <h2 style="font-size: 100px; text-align: center; margin-bottom: 40px;">FREQUENTLY ASKED QUESTIONS</h2>
+
+    <p style="font-size: 40px; margin-bottom: 8px;">Q: What is the purpose of this portfolio?</p>
+    <p style="font-size: 30px; margin-bottom: 30px;">A: This portfolio showcases and promotes different kinds of art that were created by Entertainment Multimedia and Computing (EMC) students.</p>
+
+    <p style="font-size: 40px; margin-bottom: 8px;">Q: What kind of art do you create?</p>
+    <p style="font-size: 30px; margin-bottom: 30px;">A: Digital Arts, Photography, Videography, Music Compositions, Graphic Designs, Fashion designs.</p>
+
+    <p style="font-size: 40px; margin-bottom: 8px;">Q: How do I view the artworks?</p>
+    <p style="font-size: 30px; margin-bottom: 30px;">A: You can view it by clicking the "Gallery" button on the homepage, and from there you can also view all the categories.</p>
+
+    <p style="font-size: 40px; margin-bottom: 8px;">Q: Are the artworks protected on the site?</p>
+    <p style="font-size: 30px; margin-bottom: 30px;">A: All images are watermarked and optimized for web display. Please do not download, repost, or use any content without permission — it is all original work.</p>
+
+    <p style="font-size: 40px; margin-bottom: 8px;">Q: Can I also submit and show my work to this website?</p>
+    <p style="font-size: 30px; margin-bottom: 30px;">A: Yes, all of the submitted art will be shared and showcased on this website.</p>
+
+    <p style="font-size: 40px; margin-bottom: 8px;">Q: How do I submit my work?</p>
+    <p style="font-size: 30px; margin-bottom: 30px;">A: You can submit your work to us by clicking the "Submit your work" button on the homepage, or you can directly message us with our contact information.</p>
+  </div>
+</section>
+
+       
+        <!-- footer -->
+  <footer class="contact-footer">
+    <div class="contact-container">
+      <div class="logo-section">
+        <img src="pictures/logo.webp" alt="EMCore Logo" class="logo-img">
+      </div>
+      <div class="contact-details">
+        <h2>CONNECT WITH US:</h2>
+        <p>Phone: (555) 123-4567</p>
+        <p>Email: kyle@gmail.com</p>
+        <p>Address: Valenzuela 120 Padre Pio St.</p>
+      </div>
+    </div>
+  </footer>
+
+      <div id="edit-profile-modal" class="modal" style="display:none;">
+  <div class="modal-content profile-modal" onclick="event.stopPropagation()">
+    <span class="close" onclick="document.getElementById('edit-profile-modal').style.display='none'">&times;</span>
+    <h2 class="account-title">ACCOUNT</h2>
+    
+    <label class="profile-img-wrapper" for="editPic">
+      <img id="previewProfilePic" src="pictures/default-profile.png" alt="Profile Picture">
+    </label>
+    
+    <h3 id="displayName" ondblclick="makeNameEditable()">Your Name</h3>
+    <input type="text" id="editName" placeholder="Enter new name" style="display:none;" />
+
+    <input type="file" id="editPic" accept="image/*" style="display:none;" />
+
+    <button onclick="saveProfileChanges()" class="save-button">Save Changes</button>
+  <p id="updateMessage" style="display:none; color:green; margin-top: 10px;">Profile updated successfully!</p>
+  </div>
+</div>
+      <script src="javascript/script.js"></script>
+      <script src="javascript/profile.js"></script>
+</body>
+</html>
+    </div>
+  </div>
+</header>

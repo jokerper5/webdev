@@ -1,0 +1,44 @@
+.contact-footer {
+  background: linear-gradient(to right, #ffffff, #3f3834);
+  padding: 40px 20px;
+  color: #2e2c2c;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+}
+
+.contact-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.contact-details p {
+  font-size: 18px;
+  margin: 5px 0;
+}

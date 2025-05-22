@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EMCore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="pictures/logo.webp">
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/upload.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/bottom.css" />
+</head>
+
+<body>
+  <header>
+      <a href="website.html" style="display: inline-block;">
+  <img src="pictures/logo.webp" alt="Logo" class="logo-img" style="height:60px;" />
+  </a>
+      <img id="profile-pic" src="pictures/default-profile.png" alt="Profile" class="profile-icon" onclick="toggleDropdown()" />
+      <div id="dropdown-menu" class="dropdown-menu">
+        <a href="#" onclick="openEditProfile()">Edit Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </header>
+
+
+<!--TITLE-->
+<section class="artist-section">
+  <h2 class="gallery-title">Gallery</h2>
+</section>
+
+    <input type="text" id="searchBar" placeholder="Search artworks by title..." oninput="filterArtworks()" style="width: 100%; max-width: 400px; padding: 10px; margin: 15px auto; display: block; border-radius: 6px; border: 1px solid #271d1d;">
+
+<!--EXAMPLE ARTWORK-->
+<body>
+  <div class="gallery" id="gallery">
+  <div class="artwork-card" onclick="openPopup('DIGIART1', 'This image features a charming digital illustration of four stylized female characters, presented in a soft, pastel palette with warm lighting effects. At first glance, the illustrations appear as a whimsical ensemble of four animated characters, their features softened by a pastel palette and a gauzy diffusion of golden light. But linger longer, and one begins to feel the quiet gravity embedded beneath the simplicity. A kind of poetic resonance that transcends its charming surface. Each character is not just a portrait, but an embodiment. four facets of an internal world, or perhaps, four symbolic seasons of human experience.', 'Digital', 'ART/DIGI ART/14.png')">
+    <img src="ART/DIGI ART/14.png" alt="Example 1">
+    <h3>DIGIART1</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('PHOTO1', 'Seventeen young individuals stand clustered—not rigid, not rehearsed, but radiantly real. Their poses defy uniformity; each stance is a brushstroke of personality. Some grin unashamedly, others smirk knowingly; some throw peace signs, others clasp hands in comedic dramatics. It is this glorious lack of composure that gives the image its poetry. It rejects perfection for authenticity. This is not a portrait of people, but of spirit.', 'Photography', 'ART/PHOTOGRAPHY/PPARKKS (10 of 59).jpg')">
+    <img src="ART/PHOTOGRAPHY/PPARKKS (10 of 59).jpg" alt="Example 2">
+    <h3>PHOTO1</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('DIGIART2', 'With its subdued pink and grayscale color scheme, this digital artwork embodies the artists persona. The main image is a dejected female with long, flowing black hair who appears calm or nostalgic. She looks vintage or doll-like because she is wearing a gray frock with gold buttons and a white Peter Pan collar, as well as a fluffy pink cat-eared cap.', 'Digital', 'ART/DIGI ART/DIGI ART 3.jpg')">
+    <img src="ART/DIGI ART/DIGI ART 3.jpg" alt="Example 3">
+    <h3>DIGIART2</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('DIGIART3', 'In this intimate grayscale rendering, we are offered more than just a likeness. At first glance, it appears to be a casual sketch. A smiling face, bespectacled, surrounded by soft shadows. But in the tradition of portraiture that transcends mere representation, this piece offers a gentle yet poignant reflection on identity, optimism, and presence. The strokes are loose, almost hesitant. Background smudges hover like thoughts, suggesting the invisible network of emotions, memories, and experiences that surround the subject. These marks never coalesce into detail, they dissolve just as quickly as they appear, reinforcing the transient quality of being perceived.', 'Digital', 'ART/DIGI ART/failed brett.png')">
+    <img src="ART/DIGI ART/failed brett.png" alt="Example 3">
+    <h3>DIGIART3</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('DIGIART4', 'This digital portrait presents Reze in an intimate, almost confrontational close-up. The soft realism of her skin, the gentle blush on her cheeks, and the glistening, almost tear-lined eyes contrast heavily with the cold metallic collar she pulls with her hand, a subtle yet powerful symbol of captivity, control, or internal conflict. Her hair frames her face with precision, hinting at both elegance and restraint. The magenta background, though simple, intensifies the mood by isolating her, putting Reze completely in focus and amplifying the emotional charge in her gaze. My technique uses delicate shading, controlled brushwork, and careful attention to lighting particularly in the highlights on her lips and eyes to create a highly emotional, almost photographic realism.', 'Digital', 'ART/DIGI ART/jgrezz1.jpg')">
+    <img src="ART/DIGI ART/jgrezz1.jpg" alt="Example 3">
+    <h3>DIGIART4</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('DIGIART5', 'cloudy body of water. Her piercing eyes remain locked forward while most of her face and her intent is hidden beneath the surface. Her red hair, carefully rendered with shadowed linework, contrasts against the cool, desaturated tones of the water and sky.', 'Digital', 'ART/DIGI ART/kyle 2.png')">
+    <img src="ART/DIGI ART/kyle 2.png" alt="Example 3">
+    <h3>DIGIART5</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('DIGIART6', 'This piece represents Okarun at his breaking point the moment where he stops fighting the power inside him and lets it take over. I wanted to show his descent into chaos, not as defeat, but as a transformation. In Dandadan, Okarun’s strength comes from this cursed side, but it also threatens to consume him. That duality is what makes him fascinating', 'Digital', 'ART/DIGI ART/run okarun 1.jpg')">
+    <img src="ART/DIGI ART/run okarun 1.jpg" alt="Example 3">
+    <h3>DIGIART6</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('PHOTO2', 'In this incandescent freeze-frame of performance, the artist stands illuminated—mid-song, mid-sentence, mid-revelation. What initially appears to be a straightforward concert photo unfolds, upon closer inspection, into a deeply symbolic meditation on presence, community, and the ephemeral electricity of live art. Blurred in the foreground, the audience is suggested rather than shown. But that vagueness is not accidental. It mimics the sensation of being in the crowd, of memory bending light, of adrenaline blurring edges. Phones rise like modern-day candles, silently capturing the magic. These ghosted limbs and refracted faces serve as a poignant reminder: live music is never just about the performer. It is a co-created experience, a shared ritual.', 'Photography', 'ART/PHOTOGRAPHY/YENG (1 of 106).jpg')">
+    <img src="ART/PHOTOGRAPHY/YENG (1 of 106).jpg" alt="Example 3">
+    <h3>PHOTO2</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('GRAPHIC1', 'The typographic layout makes a visual pun: bold block letters scream urgency (“FRESH EGGS!”), while the densely packed body text mimics the nutritional label or ethical disclaimer — soft in hue, nearly shy. This interplay mimics the modern consumer dilemma: impulse versus information. It dares the viewer to look past the deal and into the values behind the purchase. And it’s all done in orange. The color of appetite, optimism, and agriculture. A deliberate chromatic echo of yolk and sunshine, nature and nourishment.', 'Graphic Design', 'ART/GRAPHIC DESIGN/EGGS.png')">
+    <img src="ART/GRAPHIC DESIGN/EGGS.png" alt="Example 3">
+    <h3>GRAPHIC1</h3>
+  </div>
+
+  <div class="artwork-card" onclick="openPopup('GRAPHIC2', 'This poster, clean yet commanding, presents a visual essay on the human condition. The colossal word ART, rendered in sharp geometric mass, doesn’t merely spell a word — it anchors the viewer’s eye like a monument. Its segmented color blocks — black, gold, pink, and gray — build a layered interpretation of artistic diversity: boldness, warmth, tenderness, and neutrality. Each slice represents an emotional spectrum, suggesting that art is not one hue but a composite of the human palette. Additionally, the visual symbolism involving the emboldened letters “ART” form a pencil, and paint.', 'Graphic Design', 'ART/GRAPHIC DESIGN/MIL PROJECT.png')">
+    <img src="ART/GRAPHIC DESIGN/MIL PROJECT.png" alt="Example 3">
+    <h3>GRAPHIC2</h3>
+  </div>
+
+  
+  <div class="artwork-card" onclick="openPopup('TRAD1', 'This beautiful ink picture depicts a young woman named Tomie Kawakami, who is a character from the manga Junji Ito. She has long, dark hair. One side of her face appears normal, while the other displays a warped, horrific visage, creating a bizarre, even terrifying, visual representation. Chaos and swirling lines flood the background, adding to the pieces eerie atmosphere. A strong visual impact is produced by the contrast between the womans face and hair, which are exquisitely rendered, and the disorganized background. A combination of anime elements and a darker, more expressive approach to linework and subject matter is suggested by the overall style. A sense of psychological tension or uneasiness is evoked by the composition.', 'Traditional', 'ART/TRAD ART/TRAD ART 1.jpg')">
+    <img src="ART/TRAD ART/TRAD ART 1.jpg" alt="Example 3">
+    <h3>TRAD1</h3>
+  </div>
+
+   
+  <div class="artwork-card" onclick="openPopup('TRAD2', 'Two faces are seen in profile in this charcoal sketch, with some overlap. A sense of duality or contrast is created by the dark hair of one figure, which divides the two faces. The realistic design, which emphasizes delicate lip and eye shading and detail, evokes a feeling of meditation or silent reflection. The faces three-dimensionality is enhanced by the contrast between light and shade.', 'Traditional', 'ART/TRAD ART/TRAD ART 2.jpg')">
+    <img src="ART/TRAD ART/TRAD ART 2.jpg" alt="Example 3">
+    <h3>TRAD2</h3>
+  </div>
+
+  <!-- popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="closeBtn" onclick="closePopup()">&times;</span>
+      <img id="popupImg" src="" alt="Artwork Image" />
+      <h2 id="popupTitle"></h2>
+      <p id="popupDescription"></p>
+      <p><strong>Type:</strong> <span id="popupType"></span></p>
+    </div>
+  </div>
+  
+  <!-- edit profile modal -->
+<div id="edit-profile-modal" class="modal" style="display:none;">
+  <div class="modal-content profile-modal" onclick="event.stopPropagation()">
+    <span class="close" onclick="document.getElementById('edit-profile-modal').style.display='none'">&times;</span>
+    <h2 class="account-title">ACCOUNT</h2>
+    
+    <label class="profile-img-wrapper" for="editPic">
+      <img id="previewProfilePic" src="pictures/default-profile.png" alt="Profile Picture">
+    </label>
+    
+    <h3 id="displayName" ondblclick="makeNameEditable()">Your Name</h3>
+    <input type="text" id="editName" placeholder="Enter new name" style="display:none;" />
+
+    <input type="file" id="editPic" accept="image/*" style="display:none;" />
+
+    <button onclick="saveProfileChanges()" class="save-button">Save Changes</button>
+  <p id="updateMessage" style="display:none; color:green; margin-top: 10px;">Profile updated successfully!</p>
+
+  </div>
+</div>
+      <script src="javascript/script.js"></script>
+      <script src="javascript/gallery.js"></script>
+      <script src="javascript/filter.js"></script>
+      <script src="javascript/profile.js"></script>
+</body>
+</html>
+
+    </div>
+  </div>
+</header>
+
+        <!-- footer -->
+<footer class="contact-footer">
+  <div class="contact-container">
+    <div class="logo-section">
+      <img src="pictures/logo.webp" alt="EMCore Logo" class="logo-img" />
+    </div>
+    <div class="contact-details">
+      <h2>CONNECT WITH US:</h2>
+      <p>Phone: (555) 123-4567</p>
+      <p>Email: kyle@gmail.com</p>
+      <p>Address: Valenzuela 120 Padre Pio St.</p>
+    </div>
+  </div>
+</footer>
